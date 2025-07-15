@@ -1,0 +1,11 @@
+project:
+    name: survival-prediction-end-to-end-pipeline
+
+deployments:
+  - name: dev
+    executor: celery
+    image:
+      name: quay.io/astronomer/astro-runtime:7.3.0
+    env: dev
+    volumes:
+      - ./include:/usr/local/airflow/include
